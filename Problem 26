@@ -48,7 +48,6 @@ class Solution {
 
 //Main (not required to submit)
 package array.leetcode;
-
 public class Main {
 	
 	public static void main(String[] args) {
