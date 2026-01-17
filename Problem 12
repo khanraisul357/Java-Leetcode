@@ -21,7 +21,7 @@ class Solution {
 			
 		}
 
-
+        return newString.toString();//Converted from StringBuilder to String
 
 
 //2nd Method: TreeMap(It allows us to sort key-value pairs based on keys using a method floorEntry() that works only in by-default ascending order of map)
@@ -57,6 +57,25 @@ class Solution {
 			
 		}
 		
-		return  newString.toString();
+		return  newString.toString();//Converted from StringBuilder to String
     }
+}
+
+
+#Main.java(optional)
+
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {	
+		
+		Scanner input=new Scanner(System.in);
+		
+		int number=input.nextInt();
+		Twelve obj=new Twelve();
+		System.out.println(obj.intToRoman(number));
+
+	}
+
 }
