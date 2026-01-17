@@ -1,1 +1,39 @@
+class Solution {
+    public String intToRoman(int num) {
 
+//2nd Method: TreeMap(It allows us to sort key-value pairs based on keys using a method floorEntry() that works only in by-default ascending order of map)
+        TreeMap<Integer,String> map=new TreeMap<>();
+		
+		map.put(1000, "M");
+		map.put(900, "CM");
+		map.put(500, "D");
+		map.put(400, "CD");
+		map.put(100, "C");
+		map.put(90, "XC");
+		map.put(50, "L");
+		map.put(40, "XL");
+		map.put(10, "X");
+		map.put(9, "IX");
+		map.put(5, "V");
+		map.put(4, "IV");
+		map.put(1, "I");
+
+        StringBuilder newString=new StringBuilder();
+
+        while(num>0) {
+			
+			Map.Entry<Integer,String> es=map.floorEntry(num);//returns     key-value pair where key is largest and less than or equal to num
+			
+			int largestKey=es.getKey();
+			String romanSymbol=es.getValue();
+			
+			newString.append(romanSymbol);
+			
+			num-=largestKey;
+			
+			
+		}
+		
+		return  newString.toString();
+    }
+}
