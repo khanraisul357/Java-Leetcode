@@ -1,6 +1,27 @@
 class Solution {
     public String intToRoman(int num) {
 
+//1st Method: two distinct array(integer array & String array)
+		
+		int[] intArray= {1000,900,500,400,100,90,50,40,10,9,5,4,1};
+		String [] romanArray= {"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"}; 
+			
+		StringBuilder newString=new StringBuilder();
+
+        for(int i=0;i<intArray.length;i++) {
+			
+			while(num>=intArray[i]) {
+				
+				newString.append(romanArray[i]);
+				
+			
+				num=num-intArray[i];
+				
+			}		
+			
+		}
+
+
 
 
 //2nd Method: TreeMap(It allows us to sort key-value pairs based on keys using a method floorEntry() that works only in by-default ascending order of map)
